@@ -1,0 +1,297 @@
+/* ---------- FONT FACE ---------- */
+@font-face {
+    font-family: myfont;
+    src: url('../font/custom/Kanit-Regular.ttf')
+}
+
+/* ---------- GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', 'myfont', sans-serif;
+    color: #333;
+    font-size: 14pt;
+}
+
+.page-content-wrapper {
+    padding-top: 70px;
+    background-color: #f9f9f9;
+    padding-bottom: 50px;
+}
+
+.img-patient {
+    margin-left: 20px;
+    width: 100%;
+    max-width: 150px;
+}
+
+.img-doctor {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.tab-content{
+    padding: 10px;
+    border-bottom: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    background-color: #fff;
+}
+
+dt {
+    color: #333;
+}
+
+dd {
+    color: #333;
+}
+
+.text-color {
+    color: #5ca038;
+}
+
+a {
+    color: #5ca038;
+}
+
+a:hover {
+    color: darkslategrey;
+    text-decoration: underline;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.img-logo {
+    height: 30px;
+    width: auto;
+}
+
+.navbar-green {
+    color: #fff;
+    background-color: #5ca038;
+}
+
+.navbar-green small {
+    color: #fff;
+    background-color: #5ca038;
+}
+
+.navbar-green .container-fluid .navbar-header a {
+    color: #fff;
+}
+
+.navbar-green .container-fluid .navbar-right a {
+    color: #fff;
+}
+
+.navbar-green .container-fluid .navbar-right a:hover {
+    color: darkslategrey;
+    text-decoration: underline;
+}
+
+.nav-tabs li a:hover {
+    background-color: #dff0d8;
+}
+
+/* ---------- TABLE ---------- */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    width: 100px;
+    text-align: left;
+    /*border-bottom: 1px solid #ddd;*/
+}
+
+/*tr:hover{background-color:#f5f5f5}*/
+
+/* ---------- TIMELINE ---------- */
+
+ol#timeline {
+    position: relative;
+    display: block;
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    height: 5px;
+    background: #5ca038;
+}
+/*ol::before, ol::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    display: block;
+    widows: 0;
+    height: 0;
+    border-radius: 10px;
+    border: 10px solid #5ca038;
+}
+ol::before {
+	left: -10px;
+}
+ol::after {
+	right: -10px;
+	border: 10px solid transparent;
+	border-right: 0;
+	border-left: 20px solid #5ca038;
+    border-radius: 3px;
+}*/
+
+ol::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    display: block;
+    widows: 0;
+    height: 0;
+    border-radius: 10px;
+    border: 10px solid #5ca038;
+    right: -10px;
+	border: 10px solid transparent;
+	border-right: 0;
+	border-left: 20px solid #5ca038;
+    border-radius: 3px;
+}
+
+/* ---- Timeline elements ---- */
+
+li#timedot {
+	position: relative;
+	top: -10px;
+	display: inline-block;
+	float: left;
+	width: 250px;
+    color: #5ca038;
+	/*transform: rotate(-45deg);*/
+	/*font: bold 14px arial;*/
+    
+}
+li#timedot::before {
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: -50px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 4px solid #5ca038;
+	border-radius: 10px;
+	background: #fff;
+}
+
+/* ---- Details ---- */
+
+.details {
+	display: none;
+	position: absolute;
+	left: -60px;
+    bottom: 30px;
+	padding: 10px;
+	border-radius: 5px;
+	border-right: 2px solid rgba(0,0,0,.1);
+	border-top: 2px solid rgba(0,0,0,.1);
+	/*transform: rotate(45deg);*/
+	background-color: whitesmoke;
+}
+.details::before {
+	content: "";
+	position: absolute;
+	left: 10px;
+	bottom: -10px;
+	display: block;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: whitesmoke;
+	border-bottom: 0;
+}
+
+/* ---- Hover effects ---- */
+
+li#timedot:hover {
+    cursor: pointer;
+    color: #333;
+}
+li#timedot:hover::before {
+	top: 3px;
+	left: -50px;
+	width: 20px;
+	height: 20px;
+	border-width: 4px;
+	/*border-color: #5ca038;*/
+    background: #5ca038;
+}
+li#timedot:hover .details {
+	display: block;
+    color: #333;
+}
+
+
+
+.icon-inhome {
+    width: 100%;
+    max-width: 80px;
+}
+
+.img-home {
+    height: 150px;
+    border: 1px solid #ccc;
+}
+
+.big-text {
+    font-size: 2em;
+}
+
+
+.clearfix {
+    overflow: auto;
+    min-height: 500px;
+}
+
+.progress-bar-nocolor {
+    background-color: white;
+    color: #eee;
+    border: 1px solid #eee;
+}
+
+.progress-bar-obese {
+    background-color: lightsalmon;
+    font-size: 0.9em;
+    color: #000;
+    border: 1px solid #eee;
+}
+
+
+.tab-inhome-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+
+.li-member {
+    list-style: none;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+.border-right {
+    border-right: 1px solid #eee;
+}
+
+.text-color-blue {
+    color: lightskyblue;
+}
+
+

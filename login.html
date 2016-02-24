@@ -1,0 +1,108 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ระบบบริหารจัดการข้อมูลหน่วยบริการเยี่ยมบ้าน (Home visit service management system)</title>
+    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/mystyle_body.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/mytimeline.css">
+   
+    <link rel="stylesheet" href="path/typicons/typicons.min.css">
+    <link rel="stylesheet" href="path/font-awesome/css/font-awesome.min.css">
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-green">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img class="img-logo" alt="" src="img/logo.gif"> 
+                </a>
+            </div> <!-- /.navbar-header -->
+            <ul class="nav navbar-nav navbar-left">
+                <li><p class="h4">
+                    ระบบบริหารจัดการข้อมูลหน่วยบริการเยี่ยมบ้าน<br>
+                    <small>ภาควิชาเวชศาสตร์ครอบครัว คณะแพทยศาสตร์โรงพยาบาลรามาธิบดี มหาวิทยาลัยมหิดล</small></p>
+                </li>
+            </ul>
+            
+        </div> <!--.. /.container-fluid -->
+    </nav>
+    
+    <div id="wrapper">
+    
+    
+    
+
+    
+            
+                
+    <header>
+        <div class="col-sm-4"></div>
+        <div class="card">
+            <div id="login">
+		      <h2>ล็อคอินเข้าใช้งาน</h2>
+                <form action="javascript:void(0);" method="get">
+                    <fieldset>
+                        <p><input type="text" required value="ชื่อผู้ใช้งาน" id="idCheck" onBlur="if(this.value=='')this.value='ชื่อผู้ใช้งาน'" onFocus="if(this.value=='ชื่อผู้ใช้งาน')this.value='' " required></p> 
+                        <p><input type="password" required id="passCheck" value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "></p> 
+                        <a href="#"><p>ลืมรหัสผ่าน?</a></p>
+                        <p><input type="submit" value="เข้าสู่ระบบ" onclick="myFunction()"></p>
+                            <script>
+                            function myFunction() {
+                                var id1 = "dr1234";
+                                var pass1 = "dr4321";
+                                var id = document.getElementById("idCheck").value;
+                                var pass = document.getElementById("passCheck").value;
+                                if (id) {
+                                    alert("โปรดกรอกชื่อผู้ใช้งาน");
+                                    document.location.href = "index.html";
+                                
+                                }
+                                else {
+                                    
+                                }
+                                
+                            }
+                            </script>
+                    </fieldset>
+                </form>
+	        </div>   
+        </div>
+    </header>
+
+    
+            
+        
+  
+    
+    
+    
+
+<div id="footer">
+    
+    <p>มีปัญหาการใช้งาน หรือ ข้อแนะนำ e-mail: neung_sorawit@hotmail.com</p>
+   
+    
+    
+</div> 
+    </div>
+</body>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- custom js -->
+    <script src="js/myscript.js"></script>
+    
+    <!-- graph -->
+    <script src="path/flot/jquery.flot.min.js"></script>
+    <script src="js/mygraph.js"></script>
+</html>

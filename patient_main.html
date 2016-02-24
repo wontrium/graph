@@ -1,0 +1,117 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ระบบบริหารจัดการข้อมูลหน่วยบริการเยี่ยมบ้าน (Home visit service management system)</title>
+    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/mytimeline.css">
+    <link rel="stylesheet" href="css/mysidebar.css">
+    <link rel="stylesheet" href="path/typicons/typicons.min.css">
+    <link rel="stylesheet" href="path/font-awesome/css/font-awesome.min.css">
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-green">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img class="img-logo" alt="" src="img/logo.gif"> 
+                </a>
+            </div> <!-- /.navbar-header -->
+            <ul class="nav navbar-nav navbar-left">
+                <li><p class="h4">
+                    ระบบบริหารจัดการข้อมูลหน่วยบริการเยี่ยมบ้าน<br>
+                    <small>ภาควิชาเวชศาสตร์ครอบครัว คณะแพทยศาสตร์โรงพยาบาลรามาธิบดี มหาวิทยาลัยมหิดล</small></p>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">ออกจากระบบ</a></li>
+            </ul>
+        </div> <!--.. /.container-fluid -->
+    </nav>
+    
+    <div id="wrapper">
+    
+    
+    <div id="sidebar-wrapper">
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="img/doctor.jpg" class="img-doctor" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <a href="fammed.mahidol.ac.th"><p class="h4">นพ.ประสงค์ ทรงธรรม</p></a>
+                <small>แพทย์ประจำบ้าน</small>
+            </div>
+        </div>
+        
+        <div class="sidemenu">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="index.html">
+                        <i class="h3 typcn typcn-home"></i>
+                        <span class="sidemenu-text"> หน้าหลัก</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="patient_main.html"><span class="h3 typcn typcn-contacts"></span> ข้อมูลผู้ป่วยเยี่ยมบ้าน</a>
+                </li>
+                <li>
+                    <a href="#"><span class="h3 typcn typcn-calendar"></span> ตารางเวลาเยี่ยมบ้าน</a>
+                </li>
+                <li>
+                    <a href="#"><span class="h3 typcn typcn-clipboard"></span> สรุปข้อมูลเยี่ยมบ้าน</a>
+                </li>
+            </ul>
+        </div> <!-- /.sidemenu -->
+    </div> <!-- /#sidebar-wrapper -->
+
+    <!-- gray area -->
+    <div class="page-content-wrapper">
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li><a href="index.html"><span class="typcn typcn-home"></span> หน้าหลัก</a></li>
+                <li><span class="typcn typcn-contacts"></span>ข้อมูลผู้ป่วยเยี่ยมบ้าน</li>
+            </ol> <!-- /.breadcrumb -->
+        </div>
+     <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-success btn-circle btn-xl">
+                        <a href="patient_search.html" class="btn-circle"><i class="fa fa-search"></i></a>   
+                        </button>
+                        <br><h4>ค้นหาข้อมูลผู้ป่วยเยี่ยมบ้าน</h4>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-success btn-circle btn-xl">
+                        <a href="planning.html" class="btn-circle"><i class="fa fa-plus"></i></a>
+                        </button>
+                        <br><h4>เพิ่มข้อมูลผู้ป่วยเยี่ยมบ้าน</h4>
+                    </div>
+                    
+                    
+                </div>
+            </div> <!-- /row -->
+    
+    </div> <!-- /#page-content-wrapper -->
+    <!-- gray area -->
+
+    </div> <!-- /#wrapper -->
+</body>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- custom js -->
+    <script src="js/myscript.js"></script>
+    
+    <!-- graph -->
+    <script src="path/flot/jquery.flot.min.js"></script>
+    <script src="js/mygraph.js"></script>
+</html>

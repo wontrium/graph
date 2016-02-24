@@ -1,0 +1,231 @@
+
+header {
+  background-image: url(http://med.mahidol.ac.th/dental_division/sites/default/files/public/img/slide/IMG-Default001.jpg);
+  background-size: cover;
+  background-position: center center;
+ 
+  width: 100%;
+  transition: all .25s ease-in-out;
+}
+
+.card {
+  /* Use flexbox to position children. Fun times! */
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 92%;
+  overflow: hidden;
+  position: relative;
+  transition: all .25s ease-in-out;
+  /* Pseudo elements are the new black */
+  /* Blurred background */
+  /* --------------------------
+     Assigned a width of 100vw so it extend to the right edge of the screen, just like its parent element.
+
+     WARNING: If parent element is not 100vw, you will have to determine the width with JavaScript, because there is no way of knowing the parent's width via CSS
+
+     NOTE: If you want to really replicate G+'s feature, you can simply set the width to 100%, but it will not match up with the parent background.
+  */
+  /* Transluscent black overlay */
+  /* --------------------------
+     Multiple backgrounds on :before is not used because it is blurred and will cause the transluscent overlay to not extend to the dges of the element
+  */
+}
+.card > div {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+}
+.card:before, .card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: all .25s ease-in-out;
+}
+.card:before {
+  
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+  -webkit-filter: blur(5px);
+    height: 50%;
+    
+  width: 100vw;
+  /* Or use:
+  width: 100%;
+  ... if you want to replicate G+'s effect truthfully
+  */
+}
+.card:after {
+  background-color: rgba(0, 0, 0, 0.35);
+  right: 0;
+  z-index: 2;
+}
+.card img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
+  width: 75%;
+  max-width: 200px;
+}
+.card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.card p {
+  margin-bottom: 1rem;
+}
+.card p:last-child {
+  margin: 0;
+}
+.card p.bio {
+  font-size: .85rem;
+}
+
+section {
+  padding: 0 2rem;
+}
+section .message {
+  background-image: linear-gradient(to right, transparent 5%, rgba(0, 0, 0, 0.25) 95%);
+  color: #eee;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+section .message.note {
+  background-color: #4a7298;
+}
+section .message.warning {
+  background-color: #b13131;
+}
+
+/* CSS media queries to collapse the card when the screen gets to narrow, because it will get ugly */
+@media screen and (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
+  .card:before {
+    width: 100%;
+  }
+  .card img {
+    margin-bottom: 2rem;
+  }
+  .card .bio {
+    font-size: 1rem;
+  }
+}
+
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/* ---------- FONTAWESOME ---------- */
+
+
+/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+
+
+/* ---------- http://weloveiconfonts.com/ ---------- */
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* ---------- ERIC MEYER'S RESET CSS ---------- */
+
+
+/* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
+
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+
+/* ---------- FONTAWESOME ---------- */
+
+
+
+
+/* ---------- GENERAL ---------- */
+
+body {
+  background: #f4f4f4;
+  color: #5a5656;
+  font: 100%/1.5em 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1em;
+}
+
+h1,
+p {
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+/* ---------- LOGIN ---------- */
+
+#login {
+  margin: 50px auto;
+  width: 300px;
+}
+
+form fieldset input[type="text"],
+input[type="password"] {
+  background: #ffffff;
+  border: none;
+  border-radius: 3px;
+  color: #5a5656;
+  font-family: inherit;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+  padding: 0px 10px;
+  width: 280px;
+  -webkit-appearance: none;
+}
+
+form fieldset input[type="submit"] {
+  background-color: #64b738;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+  height: 50px;
+  text-transform: uppercase;
+  width: 280px;
+  -webkit-appearance: none;
+}
+
+form fieldset a {
+  color: #f7f1f1;
+  font-size: 18px;
+}
+
+form fieldset a:hover {
+    color: #64b738;
+  text-decoration: underline;
+}
+#footer {
+    background-color:#5ca038;
+    color:white;
+    text-align:center;
+    padding:5px; 
+}
+
+

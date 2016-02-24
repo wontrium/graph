@@ -1,0 +1,208 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ระบบบริหารจัดการข้อมูลหน่วยบริการเยี่ยมบ้าน (Home visit service management system)</title>
+    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/mystyle_map.css">
+    <link rel="stylesheet" href="css/mytimeline.css">
+    <link rel="stylesheet" href="css/mysidebar.css">
+    <link rel="stylesheet" href="path/typicons/typicons.min.css">
+    <link rel="stylesheet" href="path/font-awesome/css/font-awesome.min.css">
+    
+    <!-- Test Check -->
+    <script>
+            function myFunction() { 
+            var HN = document.getElementById("hnID").value;
+            if (HN == "" || HN == null ){
+                alert("กรุณาใส่ HN เพื่อทำการค้นหา");        
+                }
+                else if (HN ="HN1234"){
+                    
+                }
+                else {
+                  alert("♥");     
+                    
+                }
+            }
+    </script>
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-green">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img class="img-logo" alt="" src="img/logo.gif"> 
+                </a>
+            </div> <!-- /.navbar-header -->
+            <ul class="nav navbar-nav navbar-left">
+                <li><p class="h4">
+                    ระบบบริหารจัดการข้อมูลหน่วยบริการเยี่ยมบ้าน<br>
+                    <small>ภาควิชาเวชศาสตร์ครอบครัว คณะแพทยศาสตร์โรงพยาบาลรามาธิบดี มหาวิทยาลัยมหิดล</small></p>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">ออกจากระบบ</a></li>
+            </ul>
+        </div> <!--.. /.container-fluid -->
+    </nav>
+    
+    <div id="wrapper">
+    
+    
+    <div id="sidebar-wrapper">
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="img/doctor.jpg" class="img-doctor" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <a href="fammed.mahidol.ac.th"><p class="h4">นพ.ประสงค์ ทรงธรรม</p></a>
+                <small>แพทย์ประจำบ้าน</small>
+            </div>
+        </div>
+        
+        <div class="sidemenu">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href=index.html>
+                        <i class="h3 typcn typcn-home"></i>
+                        <span class="sidemenu-text"> หน้าหลัก</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="patient_main.html"><span class="h3 typcn typcn-contacts"></span> ข้อมูลผู้ป่วยเยี่ยมบ้าน</a>
+                </li>
+                <li>
+                    <a href="#"><span class="h3 typcn typcn-calendar"></span> ตารางเวลาเยี่ยมบ้าน</a>
+                </li>
+                <li>
+                    <a href="#"><span class="h3 typcn typcn-clipboard"></span> สรุปข้อมูลเยี่ยมบ้าน</a>
+                </li>
+            </ul>
+        </div> <!-- /.sidemenu -->
+    </div> <!-- /#sidebar-wrapper -->
+
+    <!-- gray area -->
+    <div class="page-content-wrapper">
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li><a href="#"><span class="typcn typcn-home"></span> หน้าหลัก</a></li>
+                <li><a href="patient_main.html"><span class="typcn typcn-contacts"></span> ข้อมูลผู้ป่วยเยี่ยมบ้าน</a></li>
+                <li><i class="fa fa-search"></i> ค้นหาข้อมูลผู้ป่วยเยี่ยมบ้าน</li>
+            </ol> <!-- /.breadcrumb -->
+        </div>
+     <div class="row">
+                <div class="col-sm-12 text-center">
+                   
+                    
+                    <br><h3>ค้นหาข้อมูลผู้ป่วยด้วยรหัส HN</h3>
+                    <br>
+                    <div class="col-sm-3"></div>
+                     <div class="col-sm-6 col-offset-6">
+                    <div class="input-group">
+                                <input type="text" class="form-control" placeholder="ค้นหาด้วยรหัส HN ของผู้ป่วย เช่น HN184326" id="hnID"> 
+                                <span class="input-group-btn"> 
+                                    <button class="btn btn-default" type="button" id="myBtn" onclick="myFunction()"> 
+                                        <i class="fa fa-search"></i> ค้นหา
+                                    </button>
+                                </span>
+                    </div><!-- /input-group -->
+                    </div>
+                    <div class="col-sm-3"></div>
+                   
+                   
+                    <div class="col-sm-12">
+                        <h4>ข้อมูลผู้ป่วย</h4>
+                        <h4 class="text-left">ค้นหาด้วยคำว่า 'HN9785356'</h4>
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+
+                                    <div class="wrapper2">
+                                  <div class="table">
+    
+                                        <div class="row2 header green">
+                                          <div class="cell">
+                                            HN
+                                          </div>
+                                          <div class="cell">
+                                            ชื่อ-นามสกุล (อายุ)
+                                          </div>
+                                          <div class="cell">
+                                            สถานะ
+                                          </div>
+                                          <div class="cell">
+                                            เยี่ยมครั้งสุดท้าย
+                                          </div>
+                                            <div class="cell">
+                                            เยี่ยมครั้งต่อไป
+                                          </div>
+                                        </div>
+
+                                        <div class="row2">
+                                          <div class="cell">
+                                            9785356
+                                          </div>
+                                          <div class="cell">
+                                            <a href="patient_search_hn9785356.html.html">นางเพียรจิต จงใจรักษ์ (60)</a>
+                                          </div>
+                                          <div class="cell">
+                                            เก่า
+                                          </div>
+                                          <div class="cell">
+                                            27 ธันวาคม 2558
+                                          </div>
+                                            <div class="cell">
+                                            27 กุมภาพันธ์ 2559
+                                          </div>
+                                        </div>
+
+                                       
+
+                                        
+
+                                      </div>
+  
+                                    </div>
+
+                            </div>
+                </div> <!-- /row -->
+                        
+                       
+                    </div>
+                            
+                        
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+    </div> <!-- /row -->
+    
+    </div> <!-- /#page-content-wrapper -->
+    <!-- gray area -->
+
+    </div> <!-- /#wrapper -->
+</body>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- custom js -->
+    <script src="js/myscript.js"></script>
+    
+    <!-- graph -->
+    <script src="path/flot/jquery.flot.min.js"></script>
+    <script src="js/mygraph.js"></script>
+</html>

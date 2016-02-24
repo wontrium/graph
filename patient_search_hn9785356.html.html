@@ -1,0 +1,906 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ระบบบริหารจัดการข้อมูลหน่วยบริการเยี่ยมบ้าน (Home visit service management system)</title>
+    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/mystyle_bk.css">
+    <link rel="stylesheet" href="css/mytimeline.css">
+    <link rel="stylesheet" href="css/mysidebar.css">
+    <link rel="stylesheet" href="css/mygraph.css">
+    <link rel="stylesheet" href="path/typicons/typicons.min.css">
+    <link rel="stylesheet" href="path/font-awesome/css/font-awesome.min.css">
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-green">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img class="img-logo" alt="" src="img/logo.gif"> 
+                </a>
+            </div> <!-- /.navbar-header -->
+            <ul class="nav navbar-nav navbar-left">
+                <li><p class="h4">
+                    ระบบบริหารจัดการข้อมูลหน่วยบริการเยี่ยมบ้าน<br>
+                    <small>ภาควิชาเวชศาสตร์ครอบครัว คณะแพทยศาสตร์โรงพยาบาลรามาธิบดี มหาวิทยาลัยมหิดล</small></p>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">ออกจากระบบ</a></li>
+            </ul>
+        </div> <!-- /.container-fluid -->
+    </nav>
+    
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="img/doctor.jpg" class="img-doctor" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <a href="fammed.mahidol.ac.th"><p class="h4">นพ.ประสงค์ ทรงธรรม</p></a>
+                    <small>แพทย์ประจำบ้าน</small>
+                </div>
+            </div> <!-- /.user-panel -->
+        
+            <div class="sidemenu">
+                <ul class="sidebar-nav">
+                    <li>
+                        <a href="#">
+                            <i class="h3 typcn typcn-home"></i>
+                            <span class="sidemenu-text"> หน้าหลัก</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="h3 typcn typcn-contacts"></span> ข้อมูลผู้ป่วยเยี่ยมบ้าน</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="h3 typcn typcn-calendar"></span> ตารางเวลาเยี่ยมบ้าน</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="h3 typcn typcn-clipboard"></span> สรุปข้อมูลเยี่ยมบ้าน</a>
+                    </li>
+                </ul>
+            </div> <!-- /.sidemenu -->
+        </div> <!-- /#sidebar-wrapper -->
+
+        <div class="page-content-wrapper">
+            <div class="container-fluid">
+                <ol class="breadcrumb">
+                    <li><a href="#"><span class="typcn typcn-home"></span> หน้าหลัก</a></li>
+                    <li><a href="patient_main.html">ข้อมูลผู้ป่วยเยี่ยมบ้าน</a></li>
+                    <li class="active">ข้อมูลผู้ป่วย HN 9785356</li>
+                </ol> <!-- /.breadcrumb -->
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-success">
+                            <div class="panel-heading"><p class="h3">HN 9785356</p></div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <img class="img-patient" src="img/grandma.gif">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>ชื่อ-นามสกุล:</p>
+                                        <p class="h3 text-color">นางเพียรจิต จงใจรักษ์</p>
+                                        <p>.</p>
+                                        <p>เพศ:</p>
+                                        <p class="h3 text-color"><img src="img/female.png" width="20px"> หญิง</p>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <p>อายุ:</p>
+                                        <p class="h2 text-color">60 <small>ปี</small></p>
+                                        <p>.</p>
+                                        <p>หมู่เลือด:</p>
+                                        <p class="h2 text-color">A+</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p>แพทย์เจ้าของไข้:</p>
+                                        <p class="h3 text-color">นพ.ณัฐพล พรรณเชษฐ์<br> <small>(011106)</small></p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>ประเภทการเยี่ยมบ้าน:</p>
+                                        <p class="h3 text-color"><span class="typcn typcn-tick"><span>Home visit care</p>
+                                        <p class="h3 text-color"><span class="typcn typcn-tick-outline"><small>Geriatric case</small></p>
+                                        <p class="h3 text-color"><span class="typcn typcn-tick-outline"><small>Palliative case</small></p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>สถานะการเยี่ยมบ้าน:</p>
+                                        <p class="h3 text-color">เยี่ยมต่อ</p>
+                                        <p>.</p>
+                                        <p>เยี่ยมครั้งต่อไป:</p>
+                                        <p class="h4 text-color">29/1/2559 
+                                            <!--<span class="label label-success">12 วัน</span>-->
+                                        </p> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /row -->
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-9">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#visit">Visit</a></li>
+                            <li><a data-toggle="tab" href="#analysis">Analysis</a></li>
+                            <li><a data-toggle="tab" href="#personal">Personal</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="visit" class="tab-pane fade in active">
+
+                                <!-- visit -->
+                                <div class="row">
+                                    <div class="col-sm-2"><p class="h4 text-color text-right"><span class="typcn typcn-zoom"></span> ค้นหาย้อนหลัง:</p></div>
+                                    <div class="col-sm-4">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="วัน/เดือน/ปี">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-success" type="button">ค้นหา</button>
+                                            </span>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                    <div class="col-sm-6"></div>
+                                </div> <!-- /.row -->
+
+                                <!-- timeline with tooltips -->
+                                <div id="timeline-wrap">
+                                    <div id="timeline"></div>
+
+                                    <!-- This is the individual marker-->
+                                    <div class="marker mfirst">
+                                        <span class="hint--top" data-hint="14/7/2558: ยกเลิกเยี่ยมบ้าน">
+                                            1<div class="inner-marker"></div>
+                                        </span>
+                                    </div> <!-- /.marker -->
+
+                                    <!-- This is the individual marker-->
+                                    <div class="marker m2">
+                                        <span class="hint--top" data-hint="18/8/2558: รอเยี่ยมต่อ">
+                                            <p class="h4">2</p><div class="inner-marker"></div>
+                                        </span>
+                                    </div> <!-- /.marker -->
+
+                                    <!-- This is the individual marker-->
+                                    <div class="marker m3">
+                                        <span class="hint--top" data-hint="30/9/2558: ปิดก่อนเยี่ยมบ้าน">
+                                            3<div class="inner-marker"></div>
+                                        </span>
+                                    </div> <!-- / marker -->
+
+                                    <!-- This is the individual marker-->
+                                    <div class="marker m4">
+                                        <span class="hint--top" data-hint="5/10/2558: รอเยี่ยมต่อ">
+                                            <p class="h4">4</p><div class="inner-marker"></div>
+                                        </span>
+                                    </div> <!-- / marker -->
+
+                                    <!-- This is the individual marker-->
+                                    <div class="marker m5">
+                                        <span class="hint--top" data-hint="24/12/2558: รอเยี่ยมต่อ">
+                                            <p class="h4">5</p><div class="inner-marker"></div>
+                                        </span>
+                                    </div> <!-- / marker -->
+                                    <!-- This is the individual marker-->
+                                    <div class="marker mlast">
+                                        <span class="hint--top" data-hint="กดเพื่อ 'เพิ่ม' สรุปการเยี่ยมบ้าน">
+                                            <p class="h4">+</p></span>
+                                            <div class="inner-marker"></div>
+                                        </span>
+                                    </div> <!-- / marker -->
+
+                                    <div id="timeline-next"></div>
+
+                                </div> <!-- /#timeline-wrap -->
+
+                                <!-- in-home-sss -->
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#summary">Summary</a></li>
+                                    <li><a data-toggle="tab" href="#immobility">Immobility</a></li>
+                                    <li><a data-toggle="tab" href="#nutrition">Nutrition</a></li>
+                                    <li><a data-toggle="tab" href="#home">Home</a></li>
+                                    <li><a data-toggle="tab" href="#otherpeople">Other people</a></li>
+                                    <li><a data-toggle="tab" href="#medication">Medication</a></li>
+                                    <li><a data-toggle="tab" href="#examination">Examination</a></li>
+                                    <li><a data-toggle="tab" href="#spirit">Spirit</a></li>
+                                    <li><a data-toggle="tab" href="#safety">Safety</a></li>
+                                    <li><a data-toggle="tab" href="#service">Service</a></li>
+                                </ul>
+
+                                    <div id="tab-inhome" class="tab-content">
+                                        <div id="summary" class="tab-pane fade in tab-inhome-padding active">
+
+                                            <dl class="dl-horizontal h4">
+                                                <dt>วันที่ไปเยี่ยม</dt>
+                                                <dd>24 ธันวาคม 2558</dd>
+
+                                                <dt>เวลาที่ไปเยี่ยม</dt>
+                                                <dd>เช้า <small>(9.00 - 11.00 น)</small></dd>
+
+                                                <dt>แพทย์ผู้ไปเยี่ยม</dt>
+                                                <dd>นพ.ดนัย นพกุล</dd>
+                                            </dl>
+
+                                            <hr>
+
+                                            <p class="h3">สรุปการวินิจฉัยปัญหาผู้ป่วย:</p>
+                                            <ul class="list-group">
+                                                <li class="list-group-item list-group-item-success">
+                                                    <div class="row">
+                                                    <div class="col-lg-11">I10 Essential (primary) hypertension</div> <div class="col-lg-1 text-right"> <span class="typcn typcn-chevron-right"></span></div></div>
+                                                </li>
+                                                <li class="list-group-item list-group-item-success">
+                                                    <div class="row">
+                                                        <div class="col-lg-11">E117 Non-insulin-dependent diabetes mellitus, with multiple complications</div>
+                                                        <div class="col-lg-1 text-right"><span class="typcn typcn-chevron-right"></span></div>
+                                                    </div> <!-- /row -->
+                                                </li>
+                                            </ul>
+                                        </div> <!-- /#summary -->
+
+                                        <div id="immobility" class="tab-pane fade tab-inhome-padding">
+                                            <table>
+                                                <tr>
+                                                    <th class="text-right">Acyivities of Daily Living:</th>
+                                                    <th><img class="icon-inhome" src="img/shower.png"></th>
+                                                    <th><img class="icon-inhome" src="img/tshirt18-no.png"></th>
+                                                    <th><img class="icon-inhome" src="img/cutlery6.png"></th>
+                                                    <th><img class="icon-inhome" src="img/toilet1.png"></th>
+                                                    <th><img class="icon-inhome" src="img/hospital31.png"></th>
+                                                    <th><img class="icon-inhome" src="img/run6.png"></th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>อาบน้ำ</td>
+                                                    <td>แต่งตัว</td>
+                                                    <td>กินข้าว</td>
+                                                    <td>เข้าห้องน้ำ</td>
+                                                    <td>เคลื่อนย้าย</td>
+                                                    <td>เดิน</td>
+                                                </tr>
+                                            </table>
+
+                                            <hr>
+
+                                            <table>
+                                                <tr>
+                                                    <th class="text-right">Instrumental Activities of Daily Living (IADLs):</th>
+                                                    <th><img class="icon-inhome" src="img/shopper1.png"></th>
+                                                    <th><img class="icon-inhome" src="img/cook8.png"></th>
+                                                    <th><img class="icon-inhome" src="img/cleaner.png"></th>
+                                                    <th><img class="icon-inhome" src="img/school35-no.png"></th>
+                                                    <th><img class="icon-inhome" src="img/watering16.png"></th>
+                                                    <th><img class="icon-inhome" src="img/medical56.png"></th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>ซื้อของ</td>
+                                                    <td>ทำอาหาร</td>
+                                                    <td>งานบ้าน</td>
+                                                    <td>โทรศัพท์</td>
+                                                    <td>รดน้ำต้นไม้</td>
+                                                    <td>กินยา</td>
+                                                </tr>
+                                            </table>
+
+                                            <hr>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-4 text-center border-right">
+                                                    <img src="img/bedbound.png" width="35px"> Bedbound: <img class="icon-inhome" src="img/cancel.png">
+                                                </div>
+                                                <div class="col-md-4 text-center border-right">
+                                                    <img src="img/homebound.png" width="35px"> Homebound: <img class="icon-inhome" src="img/cancel.png">
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    <img src="img/grandmother1.png" width="35px"> Balance Problem: <img class="icon-inhome" src="img/cancel.png">
+                                                </div>
+                                            </div>
+
+                                            <!--<table>
+                                                <tr>
+                                                    <td><img src="img/bedbound.png" width="35px"> Bedbound: <div class="text-center"><img class="icon-inhome" src="img/cancel.png"></div></td>
+                                                    <td><img src="img/homebound.png" width="35px"> Homebound: <div class="text-center"><img class="icon-inhome" src="img/cancel.png"></div></td>
+                                                    <td><img src="img/grandmother1.png" width="35px"> Balance Problem: <div class="text-center"><img class="icon-inhome" src="img/cancel.png"></div></td>
+                                                </tr>
+                                            </table>-->
+                                            
+                                            
+                                            
+                                            
+
+                                            <!--<button><a data-toggle="tab" href="#summary">กลับหน้า SUM</a></button>
+                                            <button><a data-toggle="tab" href="#nutrition">ไปหน้า N</a></button>-->
+
+                                        </div> <!-- /#immobility -->
+
+                                        <div id="nutrition" class="tab-pane fade tab-inhome-padding">
+
+                                            <dl class="dl-horizontal">
+                                                <dt>BMI:</dt>
+                                                <dd> 
+                                                    <div class="col-lg-8">
+                                                        <div class="progress">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%">Underweight</div>
+                                                                <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%">Normal</div>
+                                                                <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%">Overweight</div>
+                                                                <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%">Obese = 30</div>
+                                                                <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%">Extremely obese</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+
+                                                <dt>อาหารจานโปรด:</dt>
+                                                <dd>ของทอด</dd>
+
+                                                <dt><span class="big-text">.</span> จำนวนมื้อ:</dt>
+                                                <dd><span class="big-text">3</span> <small>มื้อ/วัน</small></dd>
+
+                                                <dt>คุณภาพอาหาร:</dt>
+                                                <dd>
+                                                    <form action="" method="get">
+                                                        <input type="checkbox" name="" value="hospital" checked> ปรุงเอง
+                                                        <input type="checkbox" name="" value="hospital"> อาหารแช่แข็ง
+                                                        <input type="checkbox" name="" value="policeoffice" checked> ซื้อสำเร็จ
+                                                        <input type="checkbox" name="" value="other"> อื่นๆ<br>
+                                                    </form>
+
+                                                </dd>
+                                            </dl> <!-- /.dl-horizontal -->
+
+                                            <div class="row">
+                                                <div class="col-lg-6 text-center"><img src="img/wine65.png" width="80" style="margin-right:20px;"> แอลกอฮอล์ <span class="big-text">1</span> แก้ว/สัปดาห์</div>
+                                                <div class="col-lg-6 text-center"><img src="img/cigar-no.png" width="80" style="margin-right:20px;"> บุหรี่ <span class="big-text">-</span> แท่ง/สัปดาห์ </div>
+                                            </div> <!-- ./row -->
+
+
+                                        </div> <!-- /#nutrition -->
+
+                                        <div id="home" class="tab-pane fade tab-inhome-padding clearfix">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="col-lg-12">
+                                                        <h1>ที่อยู่ปัจจุบัน:</h1>
+                                                        <p>เลขที่ 270 หมู่ที่ 1 อาคาร/หมู่บ้าน สุขนคร ซอย สามัคคี ถนน พระรามหก แขวงทุ่งพญาไท เขตราชเวที กรุงเทพมหานคร 10400</p>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <p class="text-center"><img src="img/home9.png" width="150px"><br>บ้านเดี่ยว 1 ชั้น</p>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-lg-7">
+                                                    <h1>แผนที่:</h1>
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.202290236063!2d100.52447731529752!3d13.76667120065673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2994da99aa1fd%3A0xc4dd9b398f456bcf!2z4LmC4Lij4LiH4Lie4Lii4Liy4Lia4Liy4Lil4Lij4Liy4Lih4Liy4LiY4Li04Lia4LiU4Li1!5e0!3m2!1sth!2sth!4v1455191320193" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                                </div>
+                                                
+                                                
+                                                
+                                            </div> <!-- /.row -->
+                                            
+                                            <!--<div class="col-lg-12">
+                                                สภาพแวดล้อม
+                                                <form action="" method="get">
+                                                    <input type="checkbox" name="" value="hospital" checked> โรงพยาบาล
+                                                    <input type="checkbox" name="" value="hospital" > สถานีอนามัย
+                                                    <input type="checkbox" name="" value="policeoffice" checked> สถานีตำรวจ
+                                                    <input type="checkbox" name="" value="other"> อื่นๆ<br>
+                                                </form>
+                                            </div>-->
+                                            <div class="col-lg-12">
+                                                <h1>รูปภาพที่เกี่ยวข้อง:</h1>
+                                                <figure>
+                                                    <img class="img-home" src="img/home1.jpg">
+                                                    <img class="img-home" src="img/home2.jpg">
+                                                    <img class="img-home" src="img/home3.jpg">
+                                                    <img class="img-home" src="img/home4.JPG">
+                                                    <img class="img-home" src="img/home5.jpg">
+                                                </figure>
+                                            </div>
+                                        </div> <!-- /#home -->
+
+                                        <div id="otherpeople" class="tab-pane fade tab-inhome-padding">
+                                            
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <h1>แผนผังครอบครัว:</h1>
+                                                    <img src="img/familytree.jpg" width="100%">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <h1>สมาชิกในครอบครัว</h1>
+                                                    <ul>
+                                                        <li class="li-member"><img src="img/female.png" width="25px"> ลูกสาว <span class="big-text">1</span> คน</li>
+                                                        <li><img src="img/female.png" width="25px"> น้องสาว <span class="big-text">1</span> คน</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div> <!-- /#otherpeople -->
+
+                                        <div id="medication" class="tab-pane fade tab-inhome-padding">
+                                            
+                                            
+                                            <dl class="dl-horizontal">
+                                                <dt>การกินยา:</dt>
+                                                <dd> 
+                                                    <div class="col-lg-8">
+                                                        <div class="progress">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%">ไม่กินยา</div>
+                                                                <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%">กินบางวัน</div>
+                                                                <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%">กินบางมื้อ</div>
+                                                                <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%">กินเกือบทุกมื้อ</div>
+                                                                <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%">กินครบถ้วน</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+
+                                                <dt>ยาที่แพทย์สั่ง:</dt>
+                                                <dd>
+                                                    <ol>
+                                                        <li>Bile Acid Sequestrants</li>
+                                                        <li>Meglitinides</li>
+                                                        <li>Metformin</li>
+                                                    </ol>
+                                                </dd>
+
+                                                <dt>ยาที่ซื้อกินเอง:</dt>
+                                                <dd>
+                                                     <ol>
+                                                        <li>Paracetamol</li>
+                                                    </ol>
+                                                </dd>
+
+                                                <dt>อาหารเสริม:</dt>
+                                                <dd>-</dd>
+                                            </dl> <!-- /.dl-horizontal -->
+                                            
+                                        </div> <!-- /#medication -->
+
+                                        <div id="examination" class="tab-pane fade">
+                                            <div class="row">
+                                                <div class="col-lg-4 border-right text-center">
+                                                    <div class="col-lg-12 border-bottom">Weight: <h1>60 <small>kg</small></h1></div>
+                                                    <div class="col-lg-12">Height: <h1>148 <small>cm</small></h1></div>
+                                                </div>
+                                                <div class="col-lg-4 border-right text-center">
+                                                    BMI: <h1>30</h1>
+                                                    
+                                                    <div class="progress">
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Underweight--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Normal--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Overweight--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%">Obese</div>
+                                                            <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%"><!--Extremely obese--></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 text-center">
+                                                    Blood type: <h1>A+</h1>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-lg-4 text-center border-right">Blood Pressure:
+                                                    <div class="row">
+                                                        <div class="col-xs-8 text-right">
+                                                            <h1>120</h1>
+                                                        </div>
+                                                        <div class="col-xs-4 text-right">
+                                                            <h6>mm/Hg</h6>
+                                                        </div>
+                                                        <div class="col-xs-8 text-right">
+                                                            <h1>80</h1>
+                                                        </div>
+                                                        <div class="col-xs-4 text-right">
+                                                            <h6>mm/Hg</h6>
+                                                        </div>
+                                                        <div class="col-xs-8 text-right">
+                                                            <h1>72</h1>
+                                                        </div>
+                                                        <div class="col-xs-4 text-right">
+                                                            <h6>mm/Hg</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 text-center border-right">Cholesterol:
+                                                    <div class="progress">
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Underweight--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Normal--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Overweight--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%">Obese</div>
+                                                            <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%"><!--Extremely obese--></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Underweight--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Normal--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Overweight--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%">Obese</div>
+                                                            <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%"><!--Extremely obese--></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Underweight--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Normal--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%"><!--Overweight--></div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:20%">Obese</div>
+                                                            <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:20%"><!--Extremely obese--></div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- /#Cholesterol-->
+                                                <div class="col-lg-4 text-center">Glucose:
+                                                    Glucose (FBS):
+                                                   <div class="progress">
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:33.33%">Underweight</div>
+                                                            <div class="progress-bar progress-bar-obese" role="progressbar" style="width:33.33%">Obese = 30</div>
+                                                            <div class="progress-bar progress-bar-nocolor" role="progressbar" style="width:33.33%">Extremely obese</div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- /#Glucose -->
+                                            </div>
+
+                                        </div> <!-- /#examination -->
+
+                                        <div id="spirit" class="tab-pane fade tab-inhome-padding">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                <h1>Spirit:</h1>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <img src="img/happy6.png" width="100%">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <textarea rows="10" cols="75">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla, metus sed aliquet cursus, lectus nunc luctus urna, in volutpat mi lacus ut velit. Sed facilisis interdum felis non commodo. Donec tortor quam, mollis a luctus nec, venenatis ornare tortor. Etiam consectetur in orci eget porta. Nulla aliquam scelerisque urna id convallis. Aenean ut fringilla magna. Fusce nec nisi ac augue ultrices fermentum venenatis eget libero.
+
+Praesent vehicula euismod tortor ac tincidunt. Nulla facilisis risus sit amet consectetur pretium. Etiam sed tristique sem, ac cursus nisl. Fusce feugiat urna et cursus efficitur. Ut vitae augue euismod, consequat arcu vel, luctus lorem. Curabitur et rhoncus nisi, et pharetra dolor. Quisque eget justo id felis molestie commodo ut vel lacus. Curabitur eget suscipit turpis, vel fringilla nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam vestibulum ut enim eu tempus. In ornare sem at tempus eleifend. Curabitur dictum lorem a lectus aliquet, sit amet hendrerit turpis volutpat. Nunc odio turpis, mollis in arcu laoreet, pellentesque scelerisque magna. Integer suscipit nunc cursus, ultrices felis at, fermentum augue. Cras non enim metus. In hac habitasse platea dictumst.</textarea>
+                                                </div>
+                                            </div>
+                                        </div> <!-- /#spirit -->
+
+                                        <div id="safety" class="tab-pane fade tab-inhome-padding">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                <h1>Safty:</h1>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <img src="img/shield-outline.png" width="100%">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <textarea rows="10" cols="75">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla, metus sed aliquet cursus, lectus nunc luctus urna, in volutpat mi lacus ut velit. Sed facilisis interdum felis non commodo. Donec tortor quam, mollis a luctus nec, venenatis ornare tortor. Etiam consectetur in orci eget porta. Nulla aliquam scelerisque urna id convallis. Aenean ut fringilla magna. Fusce nec nisi ac augue ultrices fermentum venenatis eget libero.
+
+Praesent vehicula euismod tortor ac tincidunt. Nulla facilisis risus sit amet consectetur pretium. Etiam sed tristique sem, ac cursus nisl. Fusce feugiat urna et cursus efficitur. Ut vitae augue euismod, consequat arcu vel, luctus lorem. Curabitur et rhoncus nisi, et pharetra dolor. Quisque eget justo id felis molestie commodo ut vel lacus. Curabitur eget suscipit turpis, vel fringilla nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam vestibulum ut enim eu tempus. In ornare sem at tempus eleifend. Curabitur dictum lorem a lectus aliquet, sit amet hendrerit turpis volutpat. Nunc odio turpis, mollis in arcu laoreet, pellentesque scelerisque magna. Integer suscipit nunc cursus, ultrices felis at, fermentum augue. Cras non enim metus. In hac habitasse platea dictumst.</textarea>
+                                                </div>
+                                            </div>
+                                        </div> <!-- /#safety -->
+
+                                        <div id="service" class="tab-pane fade tab-inhome-padding">
+                                            <div class="row">
+                                                <div class="col-md-12"><h1>Service:</h1></div>
+                                                <div class="col-md-3">
+                                                    
+                                                    <img src="img/hospital-buildings_318-50015.png" width="100%">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <textarea rows="10" cols="75">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla, metus sed aliquet cursus, lectus nunc luctus urna, in volutpat mi lacus ut velit. Sed facilisis interdum felis non commodo. Donec tortor quam, mollis a luctus nec, venenatis ornare tortor. Etiam consectetur in orci eget porta. Nulla aliquam scelerisque urna id convallis. Aenean ut fringilla magna. Fusce nec nisi ac augue ultrices fermentum venenatis eget libero.
+
+Praesent vehicula euismod tortor ac tincidunt. Nulla facilisis risus sit amet consectetur pretium. Etiam sed tristique sem, ac cursus nisl. Fusce feugiat urna et cursus efficitur. Ut vitae augue euismod, consequat arcu vel, luctus lorem. Curabitur et rhoncus nisi, et pharetra dolor. Quisque eget justo id felis molestie commodo ut vel lacus. Curabitur eget suscipit turpis, vel fringilla nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam vestibulum ut enim eu tempus. In ornare sem at tempus eleifend. Curabitur dictum lorem a lectus aliquet, sit amet hendrerit turpis volutpat. Nunc odio turpis, mollis in arcu laoreet, pellentesque scelerisque magna. Integer suscipit nunc cursus, ultrices felis at, fermentum augue. Cras non enim metus. In hac habitasse platea dictumst.</textarea>
+                                                </div>
+                                            </div>
+                                        </div> <!-- /#service -->
+
+                                    </div> <!-- /#tab-inhome /.tab-content -->
+                                </div> <!-- /#visit -->
+
+                                <div id="analysis" class="tab-pane fade clearfix">
+                                    <p class="h3 text-color"><span class="typcn typcn-chart-line"></span> ความสัมพันธ์ของกราฟ:</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <!-- graph -->
+                                            <div id="graph-wrapper">
+                                                <div class="graph-info">
+                                                    <a href="javascript:void(0)" class="weight"><span class="typcn typcn-media-record-outline text-color"> Weight</span></a>
+                                                    <a href="javascript:void(0)" class="cholesterol"><span class="typcn typcn-media-record-outline text-color-blue"> Cholesterol</span></a>
+                                                    <a href="#" id="bars"><span class="typcn typcn-chart-bar big-text"></span></a>
+                                                    <a href="#" id="lines" class="active"><span class="typcn typcn-chart-line big-text"></span></a>
+                                                </div>
+                                                <div class="graph-container">
+                                                    <div id="graph-lines"></div>
+                                                    <div id="graph-bars"></div>
+                                                </div>
+                                            </div>
+                                            <div id="tooltip"></div>
+                                            <!-- /graph -->
+                                        </div>
+                                        <div class="col-md-6">
+                                             <div class="dropdown">
+                                                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">เลือกแกน X
+                                                  <span class="caret"></span></button>
+                                                  <ul class="dropdown-menu">
+                                                    <li><a href="#">Weight</a></li>
+                                                    <li><a href="#">Cholesterol</a></li>
+                                                    <li><a href="#">Glucose</a></li>
+                                                    </ul>
+                                            </div> <!-- /.dropdown -->
+                                            
+                                            <br>
+                                            
+                                            <div class="dropdown">
+                                                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">เลือกแกน Y
+                                                  <span class="caret"></span></button>
+                                                  <ul class="dropdown-menu">
+                                                    <li><a href="#">Weight</a></li>
+                                                    <li><a href="#">Cholesterol</a></li>
+                                                    <li><a href="#">Glucose</a></li>
+                                                    </ul>
+                                            </div> <!-- /.dropdown -->
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div> <!-- /#analysis -->
+
+                                <div id="personal" class="tab-pane fade">
+                                    <!-- fn: edit, export, print -->
+                                    <p class="h3 text-color"><span class="typcn typcn-contacts"></span> ข้อมูลทั่วไป</p>
+
+                                    <hr>
+
+                                    <dl class="dl-horizontal h4">
+                                        <dt>รหัสโรงพยาบาล</dt>
+                                        <dd>HN 9785356</dd>
+
+                                        <dt>สถานะการเยี่ยมบ้าน</dt>
+                                        <dd>เยี่ยมต่อ</dd>
+
+                                        <dt>ประเภทการเยี่ยมบ้าน</dt>
+                                        <dd>Home visit care</dd>
+
+                                        <hr>
+
+                                        <dt>เลขที่บัตรประชาชน</dt>
+                                        <dd>3 6442 33000 27 8</dd>
+
+                                        <dt>ชื่อ-นามสกุล</dt>
+                                        <dd> นาง เพียรจิต จงใจรักษ์</dd>
+
+                                        <dt>ที่อยู่ปัจจุบัน</dt>                            
+                                        <dd>เลขที่ 270 หมู่ที่ 1 อาคาร/หมู่บ้าน สุขนคร ซอย สามัคคี ถนน พระรามหก แขวง/ตำบล ทุ่งพญาไท เขต/อำเภอ ราชเวที จังหวัด กรุงเทพมหานคร 10400</dd>
+
+                                        <dt>เพศ</dt>
+                                        <dd>หญิง</dd>
+
+                                        <dt>วัน เดือน ปีเกิด</dt>
+                                        <dd>13 มีนาคม พ.ศ.2498</dd>
+
+                                        <dt>อายุ</dt>
+                                        <dd>60 ปี 10 เดือน</dd>
+
+                                        <dt>โทรศัพท์มือถือ</dt>
+                                        <dd>096 452 1596</dd>
+
+                                        <dt>โทรศัพท์ที่ทำงาน</dt>
+                                        <dd>-</dd>
+
+                                        <dt>โทรศัพท์ที่บ้าน</dt>
+                                        <dd>02 644 9042</dd>
+
+                                        <dt>สถานภาพ</dt>
+                                        <dd>สมรส</dd>
+
+                                        <dt>ศาสนา</dt>
+                                        <dd>พุทธ</dd>
+
+                                        <dt>ระดับการศึกษา</dt>
+                                        <dd>มัธยมศึกษาตอนต้น</dd>
+
+                                        <dt>อาชีพ</dt>
+                                        <dd>แม่บ้าน/ว่างงาน</dd>
+
+                                        <dt>สิทธิการรักษา</dt>
+                                        <dd>เบิกได้</dd>
+
+                                        <hr>
+
+                                        <dt>ข้อมูลญาติที่ติดต่อได้:</dt>
+                                        <dd>
+                                            <b>ญาติคนที่ 1:</b><br>
+                                            ชื่อ-นามสกุล: นาง จิตสุภา ใจจงรักษ์ เกี่ยวข้องเป็น ลูกสาว<br>
+                                            เบอร์ติดต่อ: 095 965 4523
+                                            <hr>
+                                            <b>ญาติคนที่ 2:</b><br>
+                                            ชื่อ-นามสกุล: นาง เพียงจิต ใจจงรักษ์ เกี่ยวข้องเป็น น้องสาว<br>
+                                            เบอร์ติดต่อ: 094 456 1234
+                                        </dd>
+
+                                        <hr>
+
+                                        <dt>แผนผังครอบครัว:</dt>
+                                        <dd><img style="border: 1px solid #ccc;" height="250" width="500" src="img/familytree.jpg"></dd>
+
+                                        <hr>
+
+                                        <dt>แผนที่บ้าน:</dt>
+                                        <dd><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.202290236063!2d100.52447731529752!3d13.76667120065673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2994da99aa1fd%3A0xc4dd9b398f456bcf!2z4LmC4Lij4LiH4Lie4Lii4Liy4Lia4Liy4Lil4Lij4Liy4Lih4Liy4LiY4Li04Lia4LiU4Li1!5e0!3m2!1sth!2sth!4v1455191320193" width="500" height="250" frameborder="0" style="border:0" allowfullscreen></iframe></dd>
+
+                                        <hr>
+
+                                        <dt>แพทย์เจ้าของไข้:</dt>
+                                        <dd>นพ.ณัฐพล พรรณเชษฐ์ (011106)</dd>
+
+                                        <dt>แพทย์เยี่ยมบ้าน:</dt>
+                                        <dd>นพ.สรวิศ บุญญฐี (013651)</dd>
+
+                                        <hr>
+
+                                        <div class="text-right"><small>ผู้บันทึกข้อมูล: นพ.สรวิศ บุญญฐี (013651) เมื่อวันที่ 21/11/2558</small></div>
+
+                                    </dl>
+
+                            </div> <!-- /#personal -->
+                        </div> <!-- /.tab-content -->
+                    </div>
+
+                    <div class="col-sm-12 col-md-3">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">ผลแลป (ล่าสุด)</div>
+                            <div class="panel-body">
+
+                                Blood Pressure:
+                                <div class="row">
+                                    <div class="col-xs-8 text-right">
+                                        <h1 class="text-color">120</h1>
+                                    </div>
+                                    <div class="col-xs-4 text-right">
+                                        <h6>mm/Hg</h6>
+                                    </div>
+                                    <div class="col-xs-8 text-right">
+                                        <h1 class="text-color">80</h1>
+                                    </div>
+                                    <div class="col-xs-4 text-right">
+                                        <h6>mm/Hg</h6>
+                                    </div>
+                                    <div class="col-xs-8 text-right">
+                                        <h1 class="text-color">72</h1>
+                                    </div>
+                                    <div class="col-xs-4 text-right">
+                                        <h6>mm/Hg</h6>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                
+                                Glucose (FBS): <span class="big-text text-color">149</span>
+                               <div class="progress">
+                                    <div class="progreess">
+                                        <div class="progress-bar progress-bar-obese" role="progressbar" style="width:33.33%"><!--Underweight--></div>
+                                        <div class="progress-bar progress-bar-obese" role="progressbar" style="width:33.33%"></div>
+                                        <div class="progress-bar progress-bar-obese" role="progressbar" style="width:13.33%">High</div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <span class="h6">Low</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <span class="h6">Normal<br>70-99</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <span class="h6">High</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                
+                                BUN (Blood Urea Nitrogen): <span class="typcn typcn-info"></span>
+                                <div class="row">
+                                    <div class="col-xs-8 text-right">
+                                        <h1 class="text-color">15</h1>
+                                    </div>
+                                    <div class="col-xs-4 text-right">
+                                        <h6>mg/dL</h6>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                
+                                HBA1C: <span class="big-text text-color">8.10</span>
+                                <div class="progress">
+                                    <div class="progreess">
+                                        <div class="progress-bar progress-bar-obese" role="progressbar" style="width:33.33%"><!--Underweight--></div>
+                                        <div class="progress-bar progress-bar-obese" role="progressbar" style="width:33.33%"></div>
+                                        <div class="progress-bar progress-bar-obese" role="progressbar" style="width:13.33%">High</div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <span class="h6">Normal<br></be></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <span class="h6">Prediabets<br>6-6.4</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <span class="h6">Disbets</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                
+                                Creatinine: <span class="typcn typcn-info"></span>
+                                <div class="row">
+                                    <div class="col-xs-8 text-right">
+                                        <h1 class="text-color">8.<small>03</small></h1>
+                                    </div>
+                                    <div class="col-xs-4 text-right">
+                                        <h6>mg/dL</h6>
+                                    </div>
+                                </div>
+                                
+                                eGFR: <span class="typcn typcn-info"></span>
+                                <div class="row">
+                                    <div class="col-xs-8 text-right">
+                                        <h1 class="text-color">85.<small>29</small></h1>
+                                    </div>
+                                    <div class="col-xs-4 text-right">
+                                        <h6>ml/min/1.73m^2</h6>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+
+                            </div> <!-- /.panel-body -->
+                        </div>
+                    </div>
+                </div> <!-- /.row -->
+
+            </div> <!-- /.container-fluid -->
+        </div> <!-- /.page-content-wrapper -->
+        
+    </div> <!-- /#wrapper -->
+</body>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- custom js -->
+    <script src="js/myscript.js"></script>
+    
+    <!-- graph -->
+    <script src="path/flot/jquery.flot.min.js"></script>
+    <script src="js/mygraph.js"></script>
+</html>
